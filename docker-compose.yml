@@ -1,0 +1,26 @@
+version: "3.6"
+services:
+  file-writer1:
+    build: .
+    volumes:
+      - type: bind
+        source: ./write-file
+        target: /write-file
+    environment:
+      DOCKER_NAME: file-writer1
+  file-writer2:
+    build: .
+    volumes:
+      - type: bind
+        source: ./write-file
+        target: /write-file
+    environment:
+      DOCKER_NAME: file-writer2
+  file-writer3:
+    build: .
+    volumes:
+      - type: bind
+        source: ./write-file
+        target: /write-file
+    environment:
+      DOCKER_NAME: file-writer3

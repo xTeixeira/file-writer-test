@@ -1,0 +1,23 @@
+Arquivos com sufixo "lock" são os da implementação com flock().
+
+Para executar a implementação sem flock() utilizar:
+docker-compose up
+
+Para executar a implementação com flock() utilizar:
+docker-compose -f docker-compose-lock.yml up
+
+Respostas:
+
+4.1) Os dois programas conseguiram fazer todas as execuções? 
+Sim.
+
+4.2) Houve diferença na execução dos programas considerando a versão com as travas e a
+versão sem as travas?
+A versão com travas tende a demorar mais.
+
+4.3) As duas execuções de cada container foram consecutivas ou houve alternância entre eles?
+Houve alternância.
+
+4.4) As execuções foram todas em ordem cronológica? Ou seja, a execução atual sempre foi
+escrita em um horário posterior em relação a execução anterior?
+Sim.

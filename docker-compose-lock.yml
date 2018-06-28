@@ -1,0 +1,32 @@
+version: "3.6"
+services:
+  file-writer-lock1:
+    build:
+      context: .
+      dockerfile: Dockerfile-lock
+    volumes:
+      - type: bind
+        source: ./write-file
+        target: /write-file
+    environment:
+      DOCKER_NAME: file-writer-lock1
+  file-writer-lock2:
+    build:
+      context: .
+      dockerfile: Dockerfile-lock
+    volumes:
+      - type: bind
+        source: ./write-file
+        target: /write-file
+    environment:
+      DOCKER_NAME: file-writer-lock2
+  file-writer-lock3:
+    build:
+      context: .
+      dockerfile: Dockerfile-lock
+    volumes:
+      - type: bind
+        source: ./write-file
+        target: /write-file
+    environment:
+      DOCKER_NAME: file-writer-lock3

@@ -1,0 +1,5 @@
+FROM gcc
+ADD . /code
+WORKDIR /code
+RUN gcc --std=gnu11 fileWriterLock.c -o fileWriterLock
+CMD ["./fileWriterLock"]
